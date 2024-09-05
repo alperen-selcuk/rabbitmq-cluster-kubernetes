@@ -49,6 +49,8 @@ spec:
     storage: 10Gi
 ```
 
+!!! if you want to use onpremise solution and there is no storage solution. you must to create pv by yourself with non-storage-definiton.yaml
+
 then apply and your cluster is ready to go.
 
 ```kubecolor apply -f rabbitMQ.yaml```
