@@ -31,6 +31,7 @@ you can check from CRDs for rabbitmq operator.
 final part is easist part.
 
 you can use this yaml or change what you want. below yaml file install 1 replica rabbitmq cluster with NodePort you can change with your requirements.
+for AWS you can use directly storageclass.
 
 ```
 apiVersion: rabbitmq.com/v1beta1
