@@ -1,0 +1,27 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rabbitmq
+spec:
+  replicas: 1
+  service:
+    type: NodePort
+  persistence:
+    storage: 10Gi
+  override:
+    statefulSet:
+      spec:
+        template:
+          spec:
+            initContainers:
+            - name: file-permission
+              image: busybox
+              command: ["sh", "-c", "chmod 777 /var/lib/rabbitmq"]
+              volumeMounts:
+                - name: persistence
+                  mountPath: /var/lib/rabbitmq
+            containers:
+            - name: rabbitmq
+              volumeMounts:
+                - name: persistence
+                  mountPath: /var/lib/rabbitmq
