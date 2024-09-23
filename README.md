@@ -55,7 +55,11 @@ then apply and your cluster is ready to go.
 
 ```kubectl apply -f rabbitMQ.yaml```
 
-you can find user and password on secrets. 
+you can find user and password on secrets. you can use jq for parse fron json. 
 
+```
+kubectl get secret rabbitmq-default-user -n test -ojson | jq .data.username | xargs | base64 -d
+kubectl get secret rabbitmq-default-user -n test -ojson | jq .data.password | xargs | base64 -d
+```
 
 
