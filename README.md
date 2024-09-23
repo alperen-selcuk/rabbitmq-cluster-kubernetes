@@ -12,7 +12,7 @@ with directly manifest you can use below
 kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"
 ```
 
-but i think best and easy way krew plugins. you can install krew via their site. ```https://krew.sigs.k8s.io/docs/user-guide/setup/install/```
+but i think best and easy way krew plugins. you can install krew via their site. https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 
 then install rabbitmq plugin.
 
