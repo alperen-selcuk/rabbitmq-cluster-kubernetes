@@ -53,7 +53,7 @@ spec:
 
 then apply and your cluster is ready to go.
 
-```kubecolor apply -f rabbitMQ.yaml```
+```kubectl apply -f rabbitMQ.yaml```
 
 you can find user and password on secrets. 
 
