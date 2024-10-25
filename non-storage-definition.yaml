@@ -20,6 +20,8 @@ spec:
               volumeMounts:
                 - name: persistence
                   mountPath: /var/lib/rabbitmq
+              securityContext:
+                runAsUser: 0
             containers:
             - name: rabbitmq
               volumeMounts:
